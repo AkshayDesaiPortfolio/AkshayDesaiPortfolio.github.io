@@ -34,11 +34,11 @@ a {
     left: 0;
     top: 0;
     width: 100%;
-    height: 10px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 9%;
+    padding: 0 9%;
     z-index: 100;
     visibility: hidden;
     opacity: 0;
@@ -65,6 +65,17 @@ a {
     margin-right: 15px; /* Space between logo and menu */
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        height: auto; /* Adjust height for stacking */
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .logo-img {
+        height: 40px; /* Optional: adjust logo size for smaller screens */
+    }
+}
 
 .navbar ul {
     display: flex;
@@ -109,6 +120,7 @@ home-info h2 {
     display: inline-block;
     font-size: 32px;
     margin-top: -10px;
+    white-space: nowrap;
 }
 
 .home-info h2 span {
@@ -121,9 +133,8 @@ home-info h2 {
 }
 
 @keyframes display-text {
-    25%, 100% {
-        display: none;
-    }
+    0%, 25% { display: inline-block; }
+    26%, 100% { display: none; } /* Change visibility to hide correctly */
 }
 
 .home-info h2 span::before {
@@ -140,6 +151,20 @@ home-info h2 {
 @keyframes fill-text {
     10%, 100% { width: 0; }
     70%, 90% { width: 100%; }
+    100% { width: 0; } /* Ensure it resets */
+
+}
+
+@media (max-width: 768px) {
+    .home-info h1 {
+        font-size: 36px; /* Smaller size for mobile */
+    }
+    .home-info h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+    .home-info p {
+        font-size: 14px; /* Smaller paragraph text */
+    }
 }
 
 home-info p {

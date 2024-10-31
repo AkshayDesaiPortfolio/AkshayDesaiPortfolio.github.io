@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay Desai</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="logo.png" alt="Logo" class="logo-img">
+        <ul>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="home" id="home">
+        <div class="home-info">
+            <h1>Akshay Desai</h1>
+            <h2>I'm a
+                <span style="--i:4;" data-text="Software Engineer">Software Engineer</span>
+                <span style="--i:3;" data-text="Backend Developer">Backend Developer</span>
+                <span style="--i:2;" data-text="C# Developer">C# Developer</span>
+                <span style="--i:1;" data-text="Unit Tester">Unit Tester</span>
+            </h2>
+            <p>
+                Experienced Software Engineer with expertise in developing and testing web applications. Proficient in test automation, designing and implementation of unit tests using MSTest framework. Able to effectively self-manage during independent projects, as well as collaborate as part of a productive team.
+            </p>
+            <div class="btn-sci">
+                <a href="Resume.docx" class="btn">Download CV</a>
+                <div class="sci">
+                    <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://www.instagram.com/YOUR_INSTAGRAM_PROFILE" target="_blank">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://join.skype.com/invite/YOUR_SKYPE_LINK" target="_blank">
+                        <i class='bx bxl-skype'></i>
+                    </a>
+                </div>
+            </div>            
+        </div>        
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="Akshay.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="end-indicator"></div> -->
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a dedicated Software Engineer with experience in developing and testing web applications. 
+            My expertise lies in backend development using C# and ASP.NET MVC, alongside strong skills in database management 
+            with SQL. I thrive in collaborative environments and am well-versed in Agile methodologies, including Scrum 
+            meetings and utilizing Azure DevOps for project tracking and progress.
+        </p>
+        <p>
+            My passion for technology drives me to continually learn and adapt to new challenges, ensuring that I deliver 
+            high-quality software solutions. I am committed to improving my skills and contributing positively to any team I 
+            join.
+        </p>
+        <h3>★ My Technical Skills ★</h3>
+        <ul class="skills-list">
+            <li class="inline-section">Programming Languages:
+                <div class="skill-container">
+                    <input type="text" class="skill-input" value="C#" readonly />
+                    <input type="text" class="skill-input" value="C" readonly />
+                    <input type="text" class="skill-input" value="C++" readonly />
+                </div>
+            </li>
+            <li class="inline-section">
+                Frameworks:
+                <div class="skill-container">
+                    <input type="text" class="skill-input" value="ASP.NET MVC" readonly />
+                    <input type="text" class="skill-input" value="MSTest" readonly />
+                </div>
+            </li>
+            <li class="inline-section">Databases:
+                <div class="skill-container">
+                    <input type="text" class="skill-input" value="MS-SQL" readonly />
+                    <input type="text" class="skill-input" value="SQL Server" readonly />
+                </div>
+            </li>
+            <li class="inline-section">Web Development:
+                <div class="skill-container">
+                    <input type="text" class="skill-input" value="HTML" readonly />
+                    <input type="text" class="skill-input" value="CSS" readonly />
+                </div>
+            </li>
+            <li class="inline-section">Tools:
+                <div class="skill-container">
+                    <input type="text" class="skill-input" value="Git" readonly />
+                    <input type="text" class="skill-input" value="Azure DevOps" readonly />
+                </div>
+            </li>
+            <li class="inline-section">Methodologies:
+                <div class="skill-container">
+                    <input type="text" class="skill-input" value="Agile" readonly />
+                    <input type="text" class="skill-input" value="Scrum" readonly />
+                </div>
+            </li>
+            <li>Soft Skills:
+                <div class="skill-container">
+                    <input type="text" class="skill-input" value="Teamwork" readonly />
+                    <input type="text" class="skill-input" value="Problem-Solving" readonly />
+                    <input type="text" class="skill-input" value="Leadership" readonly />
+                    <input type="text" class="skill-input" value="Mentorship" readonly />
+                </div>
+                    <div class="skill-container"> 
+                        <input type="text" class="skill-input" value="Time Management" readonly />
+                        <input type="text" class="skill-input" value="Technical Documentation" readonly />
+                        <input type="text" class="skill-input" value="Adaptability" readonly />
+                        <input type="text" class="skill-input" value="Code Review & Feedback" readonly /></div>                                   
+            </li>
+        </ul>        
+        
+    </section>
+    
+    <!-- <div class="end-indicator"></div> -->
+    
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <input type="text" value="Backend Development" class="heading-input" />
+                <p>Expert in C# and ASP.NET MVC for creating robust server-side applications.</p>
+            </div>
+            <div class="service">
+                <input type="text" value="Database Management" class="heading-input" />
+                <p>Proficient in SQL for efficient data storage, retrieval, and management.</p>
+            </div>
+        </div>
+        <div class="services-container">
+            <div class="service">
+                <input type="text" value="Unit Testing" class="heading-input" />
+                <p>Experience in designing and implementing unit tests using MSTest framework.</p>
+            </div>
+            <div class="service">
+                <input type="text" value="Version Control & Azure DevOps" class="heading-input" />
+                <p>Skilled in Git for version control and experienced in Azure DevOps for tracking project progress and collaborating with teams.</p>
+            </div>
+        </div>
+        <!-- <div class="end-indicator"></div> -->
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="form-container">                
+                <form id="submit-to-google-sheet">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Name"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_number">Contact Number:</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                name="contact_number"
+                                id="contact_number"
+                                placeholder="Contact Number"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input
+                                class="form-control"
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea
+                            class="form-control"
+                            name="message"
+                            id="message"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Phone: +91-73873-82494 </p>
+                <p> Email: desaiakshay904@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+     <body>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbyctsHXQBJrNr6iF-ngLsL95XPX3ZMYtu-a3-ffJYxoJrh1werTnn_TDOoFiz_J2_lW/exec";
+        const form = document.forms["submit-to-google-sheet"];
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            var formData = new FormData(form);
+            fetch(scriptURL, { method: "POST", body: formData })
+                .then((response) => {
+                    swal("Done", "Submitted Successfully.", "success");
+                    form.reset(); // Clear form after successful submission
+                })
+                .catch((error) => {
+                    swal("Error", "Something went wrong. Please try again!", "error");
+                });
+        });
+    </script>    
+    </body>
+    <body>    
+        <script>
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar ul li');
+    
+            window.addEventListener('scroll', () => {
+                let current = '';
+    
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+    
+                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute('id');
+                    }
+                });
+    
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.querySelector('a').getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </body>    
+    
+</body>
+<footer>
+    <p>Copyright &copy; 2023, Akshay Desai. All rights reserved.</p>
+</footer>
+
+</html>
+
+
+

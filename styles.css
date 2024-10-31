@@ -1,0 +1,533 @@
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+     font-family: 'Arial', sans-serif; 
+     background-color: #15172a; 
+} 
+
+/* body {
+    background-image: url('background.jpg'); /* Replace with your image path */
+    /* background-size: cover; Cover the entire area */
+    /* background-repeat: no-repeat; Prevents the image from repeating */
+    /* background-position: center; Center the image */
+/* } */
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 9%;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+    background-color: #15172a;
+}
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and menu */
+}
+
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    color: #4caf50;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.6s;
+}
+
+.home-info h1 {
+    font-size: 50px;
+}
+
+home-info h2 {
+    display: inline-block;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.7px #4caf50;
+    animation: display-text 16s linear infinite;
+    animation-delay:  calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%, 100% {
+        display: none;
+    }
+}
+
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    border-right: 2px solid #4caf50;
+    color: #4caf50;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%, 100% { width: 0; }
+    70%, 90% { width: 100%; }
+}
+
+home-info p {
+    font-size: 16px;
+    margin-top: 10px 0 25px;
+}
+
+home-info .btn-sci {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the button section */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #4caf50;
+    border-radius: 40px;
+    border: 2px solid #4caf50;
+    box-shadow: 0 0 10px #4caf50;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #4caf50;
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci {
+    /* margin-left: 20px; */
+    justify-content: center; /* Center align icons */
+    margin-top: 15px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #4caf50;
+    margin: 0 8px;
+    transition: 0.5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: #4caf50;
+    color: black;
+    box-shadow: 0 0 10px #4caf50;
+    transition: 0.5s;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, #4caf50);
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after {
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+    100% { transform: rotate(360deg); }
+}
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #15172a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+    position: absolute;
+    top: 30px; /* Adjust to center */
+    display: block;
+    width: 85%; /* Adjust for sizing */
+    object-fit: cover; /* Ensures the image covers the area */
+    mix-blend-mode: lighten; /*Apply blend mode */
+}
+
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* background: #15172a; */
+    transform: translateY(-100%);
+    animation: show-bars 0.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes show-bars {
+    100% { transform: translateY(0%); }
+}
+
+#about {
+    margin-top: 10px;
+    padding: 40px 20px;
+    background-color:#15172a;/* Light background for contrast */
+    text-align: center;
+}
+
+#about p {
+    margin: 15px 0; /* Space between paragraphs */
+    color: #15172a; /* Dark text for readability */
+    font-size: 18px; /* Font size adjustment */
+}
+
+
+.end-indicator {
+    width: 100%; /* Full width */
+    height: 10px; /* Height of the indicator */
+    background: linear-gradient(to right, transparent, #4caf50, transparent); /* Gradient effect */
+    margin-top: 20px; /* Space above the indicator */
+}
+
+#about {
+    padding: 40px 20px;
+    /* background-color:#15172a; Light background for contrast */
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+}
+
+#about p {
+    margin: 15px 0; /* Space between paragraphs */
+    color: white; /* Dark text for readability */
+    font-size: 18px; /* Font size adjustment */
+}
+
+#services {
+    padding: 40px 20px;
+    background-color: transparent;
+    /* background-color: #15172a; Dark background for contrast */
+    color: #fff; /* White text for readability */
+    text-align: center;
+}
+
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around; /* Distribute space evenly */
+}
+
+.service {
+    flex: 1 1 200px; /* Grow, shrink, and set a base width */
+    margin: 10px; /* Space between services */
+    padding: 40px 20px;
+    background-color: transparent;
+    /* background-color: #15172a; Service card background */
+    border-radius: 5px; /* Rounded corners */
+    border-color: white;
+    box-shadow: 0 3px 5px #16063b33; /* Subtle shadow */
+    height: 200px; /* Set a fixed height */
+    border: 2px solid #45a049;
+}
+
+.service h3 {
+    margin-top: 10px;
+    margin-bottom: 10px; /* Space below the service title */
+}
+.service h2 {
+    margin: 30px; /* Space below the service title */
+}
+
+.service p {
+    margin-top: 20px; /* Add some space above the paragraph */
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Limit form width */
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+
+.socials a {
+    margin: 0 10px; /* Space between social icons */
+}
+#contact {
+    padding: 40px 20px;
+    background-color: transparent;
+    /* background-color: #15172a; Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    margin: 0;
+}
+
+.contact-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Space between the two parts */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    width: 80%; /* Adjust to desired percentage */
+    margin: 0 auto; /* Center the container */
+}
+
+.contact-info {
+    flex-basis: 500px; /* Fixed width for contact info */
+    margin-top: 200px; /* Reduced space between form and contact info */
+    margin-left: 30pxs;
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 10px; /* Padding inside the box */
+    background-color: #1e1f36; /* Slightly lighter background for the shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    font-size: 1.em; /* Adjust font size for better readability */
+    line-height: 2; /* Increase line height for better spacing */
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    max-width: 500px; /* Limit width for form */
+    margin: 15px 30px; /* Space around the form */
+    padding: 20px;
+    margin-bottom: -10px;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #1e1f36;
+}
+
+.form-group-row {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.form-group {
+    flex: 1; /* Allow items to grow equally */
+    margin: 10px; /* Space between items */
+    min-width: 200px; /* Minimum width to prevent them from becoming too small */
+}
+
+
+
+.form-group:last-child {
+    margin-right: 0; /* Remove margin on last element */
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width for inputs */
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+
+
+.skills-list {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+.skills-list li {
+    margin: 15px 0; /* Space between items */
+}
+
+.skill-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px; /* Space between inputs */
+    justify-content: center;
+}
+
+.skill-input {
+    padding: 10px;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    font-size: 16px; /* Font size */
+    width: auto; /* Set width to auto */
+    min-width: 80px; /* Minimum width for better usability */
+    max-width: 200px; /* Optional maximum width */
+    display: inline-block; /* Make the input an inline-block element */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-align: center;
+}
+
+.inline-section {
+    display: inline-block;
+    width: 48%; /* Adjust as needed */
+    vertical-align: top;
+    margin-right: 2%; /* Space between sections */
+}
+
+.skill-input:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.heading-input {
+    width: auto; /* Full width */
+    height: 40px; /* Height for visibility */
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #45a049; /* Heavy Blue Color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #45a049; /* Dark background */
+    color: white; /* White text */
+    font-size: 18px; /* Font size */
+    text-align: center; /* Center text */
+}
+
+footer p {
+    margin-top:    0px;
+    background-color: transparent; /* Light background color */
+    padding: 5px; /* Padding around the footer */
+    text-align: center; /* Center the text */
+    font-size: 10px; /* Font size */
+    color: white; /* Text color */
+    border-top: 1px solid black; /* Top border for separation */
+}

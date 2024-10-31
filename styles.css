@@ -34,7 +34,7 @@ a {
     left: 0;
     top: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +45,7 @@ a {
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.2s;
     background-color: #15172a;
+    
 }
 
 @keyframes show-content {
@@ -102,14 +103,20 @@ a {
 .home {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
     height: 100vh;
-    padding: 60px 9% 0;
+    padding: 100px 2% 0;
     color: white;
     visibility: hidden;
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.6s;
+}
+
+
+section {
+    padding-top: 70px; /* Ensure all sections have space above */
+    min-height: calc(100vh - 60px); /* Adjust if using viewport height */
 }
 
 .home-info h1 {
@@ -118,16 +125,19 @@ a {
 
 home-info h2 {
     display: inline-block;
-    font-size: 32px;
+    font-size: 20px;
     margin-top: -10px;
+    padding-right: 0;
     white-space: nowrap;
 }
 
 .home-info h2 span {
+    /* font-size: 15px; */
+    /* padding-right: -10px; */
     position: relative;
     display: inline-block;
     color: transparent;
-    -webkit-text-stroke: 0.7px #4caf50;
+    -webkit-text-stroke: 0.7px transparent;
     animation: display-text 16s linear infinite;
     animation-delay:  calc(-4s * var(--i));
 }
@@ -140,7 +150,7 @@ home-info h2 {
 .home-info h2 span::before {
     content: attr(data-text);
     position: absolute;
-    width: 0%;
+    width: 0;
     border-right: 2px solid #4caf50;
     color: #4caf50;
     white-space: nowrap;
@@ -169,7 +179,7 @@ home-info h2 {
 
 home-info p {
     font-size: 16px;
-    margin-top: 10px 0 25px;
+    margin-top: 10px 0 20px;
 }
 
 home-info .btn-sci {
@@ -238,8 +248,8 @@ home-info .btn-sci {
 .home-img .img-box::after {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     background: conic-gradient(transparent, transparent, transparent, #4caf50);
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
@@ -298,7 +308,7 @@ home-info .btn-sci {
 
 #about {
     margin-top: 10px;
-    padding: 40px 20px;
+    padding: 70px 20px;
     background-color:#15172a;/* Light background for contrast */
     text-align: center;
 }
@@ -332,7 +342,7 @@ home-info .btn-sci {
 }
 
 #services {
-    padding: 40px 20px;
+    padding: 70px 20px;
     background-color: transparent;
     /* background-color: #15172a; Dark background for contrast */
     color: #fff; /* White text for readability */
@@ -387,6 +397,10 @@ input, textarea {
     border-radius: 5px; /* Rounded corners */
 }
 
+html {
+    scroll-padding-top: 70px; /* Match this to your navbar height */
+}
+
 button {
     padding: 10px;
     background-color: #4caf50; /* Button color */
@@ -405,7 +419,7 @@ button:hover {
     margin: 0 10px; /* Space between social icons */
 }
 #contact {
-    padding: 40px 20px;
+    padding: 70px 20px;
     background-color: transparent;
     /* background-color: #15172a; Dark background */
     color: #fff; /* White text */

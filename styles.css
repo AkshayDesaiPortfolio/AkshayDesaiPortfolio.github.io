@@ -103,9 +103,10 @@ a {
 .home {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 50px;
     height: 100vh;
-    padding: 100px 2% 0;
+    padding: 100px 3% 3%;
+    padding-right: 1%; 
     color: white;
     visibility: hidden;
     opacity: 0;
@@ -115,7 +116,7 @@ a {
 
 
 section {
-    padding-top: 70px; /* Ensure all sections have space above */
+    padding-top: 80px; /* Ensure all sections have space above */
     min-height: calc(100vh - 60px); /* Adjust if using viewport height */
 }
 
@@ -125,15 +126,15 @@ section {
 
 home-info h2 {
     display: inline-block;
-    font-size: 20px;
+    font-size: 32px;
     margin-top: -10px;
-    padding-right: 0;
     white-space: nowrap;
+    font-size: 100%;
 }
 
 .home-info h2 span {
-    /* font-size: 15px; */
-    /* padding-right: -10px; */
+    font-size: 15px;
+    padding-left: 1%; 
     position: relative;
     display: inline-block;
     color: transparent;
@@ -248,8 +249,8 @@ home-info .btn-sci {
 .home-img .img-box::after {
     content: '';
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     background: conic-gradient(transparent, transparent, transparent, #4caf50);
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
